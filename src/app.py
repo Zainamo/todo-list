@@ -15,7 +15,8 @@ DB_HOST = os.environ.get('DB_HOST')
 DB_PORT = os.environ.get('DB_PORT')
 DB_USER = os.environ.get('DB_USER')
 DB_PASS = os.environ.get('DB_PASSWORD')
-app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{DB_USER}:{DB_PASS}@postgres:{DB_PORT}/{DB_HOST}'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{DB_USER}:{DB_PASS}' \
+                                        f'@postgres:{DB_PORT}/{DB_HOST}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy()
 db.init_app(app)
@@ -42,7 +43,6 @@ class TodoView(MethodView, TodoUtils):
         else:
             todos = self.model.query.all()
             return render_template('todo.html', todos=todos)
-
 
     @transaction(db)
     @validates('title')

@@ -11,6 +11,7 @@ def test_create_todo_item():
     )
     assert resp.status_code == 302
 
+
 def test_get_todo_list():
     data = {
         'title': 'custom_title'

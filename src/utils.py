@@ -28,5 +28,5 @@ class TodoUtils:
         """
         validation that eliminates digits as a task
         """
-        if re.match('\d', title):
+        if re.match("[0-9]", title):
             raise AssertionError('not a valid task')

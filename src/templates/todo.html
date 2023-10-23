@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="p-3 mb-2 bg-dark text-white">
+    <h1 class="display-6">To do list</h1>
+</div>
+    <div class="form-check">
+    <ul>
+    {% for todo in todos %}
+        <li>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios1" value="option1" checked>
+        <label class="form-check-label" for="gridRadios1">
+         {{ todo.title }}
+        </label>
+      </div>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock content %}
+
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Todo List</title>#}
+{#</head>#}
+{#<body>#}
+{##}
+{##}
+{#<div>#}
+{#    <h1>TODOs</h1>#}
+{#    <ul>#}
+{#    {% for todo in todos %}#}
+{#        <li><input type="checkbox" id="todo-item"> {{ todo.title }} </li>#}
+{#    {% endfor %}#}
+{#    </ul>#}
+{#</div>#}
+{#<div>#}
+{#    <form action="" method="post">#}
+{#        <label for="item">Add TODO item</label><br>#}
+{#        <input type="text" id="item" name="title"><br><br>#}
+{#        <input type="submit" value="Submit">#}
+{#    </form>#}
+{#</div>#}
+{##}
+{#</body>#}
+{#</html>#}

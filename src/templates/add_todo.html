@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <form class="row row-cols-lg-auto g-3 align-items-center" method="post">
+            <div class="col-12">
+                <label class="visually-hidden" for="inlineFormInputGroupUsername">Add item</label>
+                <div class="input-group">
+                    <div class="input-group-text">Task</div>
+                    <input type="text" class="form-control" name="title" id="inlineFormInputGroupUsername"
+                           placeholder="Add Item">
+                </div>
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
